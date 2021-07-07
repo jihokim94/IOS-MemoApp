@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0295EC3269447DD00C0D8F3 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0295EC2269447DD00C0D8F3 /* ComposeViewController.swift */; };
 		A0295EC52694BA1A00C0D8F3 /* UIViewControllerAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0295EC42694BA1A00C0D8F3 /* UIViewControllerAlert.swift */; };
+		A04A8D8226958DC800114804 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A04A8D8126958DC800114804 /* DetailViewController.swift */; };
 		A08D5ACE26935E2C0087E599 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08D5ACD26935E2C0087E599 /* Model.swift */; };
 		A08D5AD2269360C80087E599 /* MemoListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08D5AD1269360C80087E599 /* MemoListTableViewController.swift */; };
 		A0AB545B26934D5200D0FCDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB545A26934D5200D0FCDB /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		A0295EC2269447DD00C0D8F3 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		A0295EC42694BA1A00C0D8F3 /* UIViewControllerAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerAlert.swift; sourceTree = "<group>"; };
+		A04A8D8126958DC800114804 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A08D5ACD26935E2C0087E599 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A08D5AD1269360C80087E599 /* MemoListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListTableViewController.swift; sourceTree = "<group>"; };
 		A0AB545726934D5200D0FCDB /* JhMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JhMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				A0AB546826934D5300D0FCDB /* LaunchScreen.storyboard */,
 				A0295EC2269447DD00C0D8F3 /* ComposeViewController.swift */,
 				A0295EC42694BA1A00C0D8F3 /* UIViewControllerAlert.swift */,
+				A04A8D8126958DC800114804 /* DetailViewController.swift */,
 			);
 			path = JhMemo;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				A0AB546526934D5200D0FCDB /* JhMemo.xcdatamodeld in Sources */,
 				A08D5ACE26935E2C0087E599 /* Model.swift in Sources */,
 				A0295EC52694BA1A00C0D8F3 /* UIViewControllerAlert.swift in Sources */,
+				A04A8D8226958DC800114804 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

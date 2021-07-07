@@ -19,8 +19,28 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        tableView.reloadData() // 리로드해준다~ 최신으로 업데이트
-//        print(#function)
+        //        tableView.reloadData() // 리로드해준다~ 최신으로 업데이트
+        //        print(#function)
+    }
+    
+    var token : NSObjectProtocol?
+    
+    deinit {
+        if let token = token {
+            NotificationCenter.default.removeObserver(token)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) { // 다음 컨트롤러로 넘기기전 현 컨트롤러에서 전해줘야할 동작들을 준비해준다
+        
+        if let cell = sender as? UITableViewCell , let indexPath = tableView.indexPath(for: cell){
+            if let vc = segue.destination as? DetailViewController {
+                vc.memo = Memo.dummyMemoList[indexPath.row]
+                // detailViewContoroller에 memo객체 데이터 전달
+            }
+        }
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +76,7 @@ class MemoListTableViewController: UITableViewController {
         
         // Configure the cell...
         // 표시할 데이터 가져오기
-//        The value of the row element of the index path.
+        //        The value of the row element of the index path.
         let target = Memo.dummyMemoList[indexPath.row]
         cell.textLabel?.text = target.content
         cell.detailTextLabel?.text = formatter.string(from: target.insertDate) // date인스턴스를 텍스트형으로 전환 decription
