@@ -59,7 +59,8 @@ extension DetailViewController : UITableViewDataSource{
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
             
-            cell.textLabel?.text = formatter.string(from:memo?.insertDate ?? Date())
+//            cell.textLabel?.text = formatter.string(from:memo?.insertDate ?? Date())
+            cell.textLabel?.text = memo?.insertDate
             return cell
         default: fatalError()
         }

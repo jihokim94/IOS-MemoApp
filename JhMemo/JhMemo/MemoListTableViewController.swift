@@ -19,6 +19,8 @@ class MemoListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        DataManager.shared.fetchMemo()
+        tableView.reloadData()
         //        tableView.reloadData() // 리로드해준다~ 최신으로 업데이트
         //        print(#function)
     }
@@ -35,7 +37,8 @@ class MemoListTableViewController: UITableViewController {
         
         if let cell = sender as? UITableViewCell , let indexPath = tableView.indexPath(for: cell){
             if let vc = segue.destination as? DetailViewController {
-                vc.memo = Memo.dummyMemoList[indexPath.row]
+//                vc.memo = Memo.dummyMemoList[indexPath.row]
+                vc.memo = DataManager.shared.memoList[indexPath.row]
                 // detailViewContoroller에 memo객체 데이터 전달
             }
         }
@@ -46,7 +49,7 @@ class MemoListTableViewController: UITableViewController {
         super.viewDidLoad()
         
         
-        NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) { (noti) in
+       token = NotificationCenter.default.addObserver(forName: ComposeViewController.newMemoDidInsert, object: nil, queue: OperationQueue.main) { (noti) in
             self.tableView.reloadData()
         }
         // Uncomment the following line to preserve selection between presentations
@@ -65,7 +68,8 @@ class MemoListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemoList.count
+//        return Memo.dummyMemoList.count
+        return DataManager.shared.memoList.count
     }
     
     
@@ -77,9 +81,12 @@ class MemoListTableViewController: UITableViewController {
         // Configure the cell...
         // 표시할 데이터 가져오기
         //        The value of the row element of the index path.
-        let target = Memo.dummyMemoList[indexPath.row]
+//        let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate) // date인스턴스를 텍스트형으로 전환 decription
+//        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
+        cell.detailTextLabel?.text = target.insertDate
+        // date인스턴스를 텍스트형으로 전환 decription
         
         return cell
     }
