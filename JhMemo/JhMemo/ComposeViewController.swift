@@ -7,9 +7,10 @@
 
 import UIKit
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UITextViewDelegate {
     
     var editTarget : Memo?
+    var originalContent : String?
     
     @IBAction func close(_ sender: UIBarButtonItem) {
         dismiss(animated: true, completion: nil) // 프레젠트 모달창을 끌때 쓰는 메소드
@@ -52,15 +53,17 @@ class ComposeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        로딩 될때 수정하는 객체의 여부에 따라 모달창 설정
         if let memo = editTarget {
             navigationItem.title = "메모 편집"
             memoTextView.text = memo.content
+            originalContent = memo.content
         } else {
             navigationItem.title = "새 메모"
             memoTextView.text = ""
         }
         // Do any additional setup after loading the view.
+        memoTextView.delegate = self
     }
     
     
