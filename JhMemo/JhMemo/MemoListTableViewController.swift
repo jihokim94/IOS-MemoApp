@@ -85,6 +85,14 @@ class MemoListTableViewController: UITableViewController {
         cell.textLabel?.text = target.content
 //        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
         cell.detailTextLabel?.text = target.insertDate
+        
+        cell.detailTextLabel?.textColor = UIColor(named: "MyLabelColor")
+//        if #available(iOS 11.0, *){
+//            cell.detailTextLabel?.textColor = UIColor(named: "MyLabelColor")
+//        }else {
+//            cell.detailTextLabel?.textColor = UIColor.lightGray
+//        }
+        
         // date인스턴스를 텍스트형으로 전환 decription
         
         return cell

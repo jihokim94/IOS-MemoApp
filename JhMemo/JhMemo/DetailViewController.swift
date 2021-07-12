@@ -32,7 +32,9 @@ class DetailViewController: UIViewController {
     @IBAction func deleteMemo(_ sender: Any) {
         let alert = UIAlertController(title: "삭제 확인", message: "메모를 삭제할까요?", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "삭제", style: .destructive) { [weak self] (action) in
-            DataManager.shared.deleteMemo(self?.memo)
+            DataManager.shared.deleteMemo(self?.memo) // 데이터에서 삭제
+            
+            //Pops the top view controller from the navigation stack and updates the display.
             self?.navigationController?.popViewController(animated: true)
         }
         alert.addAction(okAction)
@@ -78,6 +80,7 @@ class DetailViewController: UIViewController {
      */
     
 }
+
 
 extension DetailViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -84,19 +84,19 @@
 		A0AB545926934D5200D0FCDB /* JhMemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0AB546026934D5200D0FCDB /* Main.storyboard */,
+				A08D5AD1269360C80087E599 /* MemoListTableViewController.swift */,
+				A0295EC2269447DD00C0D8F3 /* ComposeViewController.swift */,
+				A0295EC42694BA1A00C0D8F3 /* UIViewControllerAlert.swift */,
+				A04A8D8126958DC800114804 /* DetailViewController.swift */,
 				A04A8D832695E80000114804 /* Data */,
 				A08D5ACC26935E0B0087E599 /* Model */,
 				A0AB545A26934D5200D0FCDB /* AppDelegate.swift */,
 				A0AB545C26934D5200D0FCDB /* SceneDelegate.swift */,
-				A0AB546026934D5200D0FCDB /* Main.storyboard */,
 				A0AB546626934D5300D0FCDB /* Assets.xcassets */,
 				A0AB546B26934D5300D0FCDB /* Info.plist */,
 				A0AB546326934D5200D0FCDB /* JhMemo.xcdatamodeld */,
-				A08D5AD1269360C80087E599 /* MemoListTableViewController.swift */,
 				A0AB546826934D5300D0FCDB /* LaunchScreen.storyboard */,
-				A0295EC2269447DD00C0D8F3 /* ComposeViewController.swift */,
-				A0295EC42694BA1A00C0D8F3 /* UIViewControllerAlert.swift */,
-				A04A8D8126958DC800114804 /* DetailViewController.swift */,
 			);
 			path = JhMemo;
 			sourceTree = "<group>";
